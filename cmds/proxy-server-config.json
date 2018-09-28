@@ -1,0 +1,30 @@
+{
+    "ng":{
+        "url":"/",
+        "http-proxy-middleware":{
+            "target": "http://localhost:4200",
+            "changeOrigin": true ,
+            "ws":true
+        }
+    },
+    "jsonserver":{
+        "url":"/api",
+        "http-proxy-middleware":{
+            "target": "http://localhost:8080",
+            "changeOrigin": true 
+        }
+    },
+    "realserver":{
+        "url":"/api",
+        "http-proxy-middleware":{
+            "target": "http://example.com",
+            "changeOrigin": true 
+        }
+    },
+    "modes":{
+        "default":["jsonserver","ng"],
+        "online":["realserver","ng"],
+        "dev":["jsonserver","ng"]
+    }
+   
+}
