@@ -14,7 +14,7 @@ module.exports=(args)=>{
     let config=require(path.resolve(process.cwd(),configPath))
     try{
         let pipe=args.m||"default"
-        config.modes[pipe].forEach(k=>{
+        config.rules[pipe].forEach(k=>{
             let rule
             if(typeof k == "string"){
                rule=config[k]
@@ -34,7 +34,7 @@ module.exports=(args)=>{
         let port =config.port||8080
         app.listen(port,host,(err=>{
             if(err) throw err
-            console.log(`Server start at ${host}:${port} , using ${pipe} mode`)
+            console.log(`Server start at ${host}:${port} , using ${pipe} rules`)
         }))
     }catch (e){
         throw e

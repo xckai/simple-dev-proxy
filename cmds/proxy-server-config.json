@@ -21,7 +21,7 @@
             "changeOrigin": true 
         }
     },
-    "modes":{
+    "rules":{
         "default":["jsonserver","ng"],
         "online":["realserver","ng"],
         "dev":["jsonserver","ng"]
