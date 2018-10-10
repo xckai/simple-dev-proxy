@@ -1,6 +1,6 @@
 {
   "name": "simple-dev-proxy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple proxy server,used for proxy URL and handle static file. ",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,11 @@
     "express": "^4.16.3",
     "http-proxy-middleware": "^0.19.0",
     "minimist": "^1.2.0"
-  }
+  },
+  "keywords": [
+    "fontend-dev",
+    "proxy",
+    "reverse proxy",
+    "dev-proxy"
+  ]
 }
