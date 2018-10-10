@@ -9,3 +9,36 @@ Simple dev proxy is reverse proxy which using "HTTP-PROXY-MIDDLEWARE" to config 
     > - Add your proxy-middeware object , edit the url and http-proxy-middleware options.
     > - define your own proxy rules in 'rules' object.
 4. start . run 'simple-dev-proxy start -m [rule's name]'
+# config file example
+````
+    {
+        "ng":{
+            "url":"/",
+            "http-proxy-middleware":{
+                "target": "http://localhost:4200",
+                "changeOrigin": true ,
+                "ws":true
+            }
+        },
+        "jsonserver":{
+            "url":"/api",
+            "http-proxy-middleware":{
+                "target": "http://localhost:8080",
+                "changeOrigin": true 
+            }
+        },
+        "realserver":{
+            "url":"/api",
+            "http-proxy-middleware":{
+                "target": "http://example.com",
+                "changeOrigin": true 
+            }
+        },
+        "rules":{
+            "default":["jsonserver","ng"],
+            "online":["realserver","ng"],
+            "dev":["jsonserver","ng"]
+        }
+    
+    }
+````
