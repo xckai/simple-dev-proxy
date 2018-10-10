@@ -1,6 +1,6 @@
 {
   "name": "simple-dev-proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple proxy server,used for proxy URL and handle static file. ",
   "main": "index.js",
   "scripts": {
