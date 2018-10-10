@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "simple-server": "bin/simple-server"
+    "simple-dev-proxy": "bin/simple-dev-proxy"
   },
   "repository": {
     "type": "git",
